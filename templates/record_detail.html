@@ -1,0 +1,16 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+</nav>
+<div class="row" style="margin-top: 70px;">
+   <div class="col-12"> <h2 style="padding-left: 30px;">Name: <span style="font-weight: lighter;">{{ record.name }}</span></h2><br></div>
+    <div class="col-12"><h2 style="padding-left: 30px;">Phone: <span style="font-weight: lighter;">{{ record.phone }}</span></h2><br></div>
+    <div class="col-12" ><button style="margin-left: 30px;"><a href="{% url 'record_delete' record.pk %}">Delete</a></button></div>
+</div>
+
+    
+    
+
+{% endblock content %}
